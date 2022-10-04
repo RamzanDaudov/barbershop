@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Онлайн заявка</title>
+</head>
+<body>
+<form style="background: #968882"
+
+      class="barber_form"
+      method="POST"
+      name="zayavka"
+      action="/zayavka.php"
+>
+    <p class="caption" style="font-size: 30px">Записаться онлайн</p>
+
+    <div class="infofield" style="font-size: 25px;color: maroon">Тип стрижки:</div>
+    <select name="service_type" style="border: 3px solid #7118FF; padding: 5px ">
+        <option style="color: red">Стрижка</option>
+        <option style="color: red">Стрижка бороды</option>
+        <option selected="selected" style="color: red">Стрижка + Борода</option>
+    </select>
+
+    <div class="infofield" style="font-family: 'Arial Black'; line-height: 40px; font-size: 25px">Уровень специалиста:</div>
+    <label style="line-height: 25px;font-size: 20px"><input type="radio" name="master" value="1"/>Стажер</label>
+    <label style="font-size: 20px"
+    ><input
+            type="radio"
+            name="master"
+            value="2"
+            checked="checked"
+    />Барбер</label
+    >
+    <label style="font-size: 20px"><input type="radio" name="master" value="3"/>VIP Барбер</label>
+
+    <div class="infofield" style="line-height: 40px;font-size: 25px">Дополнительные услуги:</div>
+    <label style="font-size: 20px"><input type="checkbox" name="massage"/> Массаж головы</label>
+    <label style="font-size: 20px"><input type="checkbox" name="razor"/> Опасная бритва</label>
+
+    <div class="infofield" style="line-height: 40px;font-size:25px ">Дата и время записи:</div>
+    <input type="datetime-local" name="date_time" style="border: 3px solid #7118FF; padding: 5px; margin: 10px"/>
+
+    <fieldset style="border: 4px solid #250649">
+        <legend style="font-size: 25px;border:4px solid #250649 ">Контактная информация</legend>
+        <div class="infofield" style="font-size: 20px">Ваше имя:</div>
+        <input type="text" name="name" placeholder="введите ваше имя"
+               style="border: 3px solid#7118FF;font-size: 15px; padding: 8px;margin: 10px ;"/>
+
+        <div class="infofield" style="font-size: 20px">Ваш телефон:</div>
+        <input
+                type="tel"
+                name="phone"
+                placeholder="например, +7 800 123-45-67"
+                style="border: 3px solid #7118FF; padding: 8px; margin:10px;font-size: 15px;"
+        />
+    </fieldset>
+
+    <input type="submit" name="zayavka_submit" value="Записаться"
+           style="border: 3px solid green; height: 30px;width: 300px;font-size: 20px"/>
+</form>
+</body>
+</html>
